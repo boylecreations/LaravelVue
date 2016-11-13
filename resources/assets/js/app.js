@@ -12,6 +12,7 @@ Vue.filter('strip-html', function(value) {
 
 //Vue.filter('escape-string')
 
+
 var vcontact = new Vue({
   el: "#vcform",
   data: function() {
@@ -21,30 +22,38 @@ var vcontact = new Vue({
         email: '',
         subject: '',
         message: '',
-        counter: 0
+        counter: 0,
+        attachedRed: false,
+        attachedBlue: false,
+        attachedGreen: false,
+        attachedPink: false,
+        color: '',
+        enlarge: false
     }
   },
   computed: {
     counter: function() {
-      console.log('Compute Output');
-      return this.counter >= 37 ? 'Greater then 37 ' : 'Less then 37';
-      //return this.name + " at " + this.email + " talking about " + this.subject + " saying " + this.message;
+      //console.log('Compute Output');
+      //return this.counter >= 37 ? 'Greater then 37 ' : 'Less then 37';
+      return this.name + " at " + this.email + " talking about " + this.subject + " saying " + this.message;
+    },
+    style: function() {
+      return
     }
   },
   watch: {
     name: function(value) {
       //view instanced needs to be stored in watch
-      var vm = this;
-      setTimeout(function() {
-
-        console.log('watch called');
-      }, 2000)
+      //var vm = this;
+      //setTimeout(function() {
+        //console.log('watch called');
+      //}, 2000)
     },
     counter: function(value) {
       var vm = this;
       setTimeout(function() {
-        vm.counter = 0;
-        return vm.counter >= 37 ? 'Greater then 37 ' : 'Less then 37';
+        //vm.counter = 0;
+        //return vm.counter >= 37 ? 'Greater then 37 ' : 'Less then 37';
       }, 2000)
     }
   },

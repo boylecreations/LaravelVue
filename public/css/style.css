@@ -14,11 +14,30 @@
 #vcform { padding: 60px 0; }
 
 .film {
-  color: white;
   background: rgba(230,63,137,0.3);
 }
 
 /*------ Helper Classes------*/
+
+.demoBlock {
+ max-width:300px;
+ height:200px;
+ background: white;
+ border-bottom:1px solid #ccc;
+ margin-bottom:60px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.pink {
+  background-color: pink;
+}
 
 .dark {
   color:#191919;
@@ -30,7 +49,7 @@
   padding:20px 0;
 }
 .full {
-  background: url('/images/10.jpg') no-repeat center center fixed; 
+  background: url('/images/10.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

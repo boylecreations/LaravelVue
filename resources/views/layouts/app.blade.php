@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body id="app-layout" class="@yield('body-id', '')">
+<body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
