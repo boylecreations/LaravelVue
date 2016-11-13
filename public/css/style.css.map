@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.css","style.scss"],"names":[],"mappings":"AAAA;ACCA;EAAkB,+BAA+B;EAAE,aAAY,EAAI","file":"style.css","sourcesContent":[null,"\n.navbar-default { background: #191919 !important; color:white; }\n"]}
