@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<section id="hero">
+<section id="hero" >
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="full">
+                <div class="col-md-10 col-md-offset-1">
 
-                This the home page.
+                    <h1 class="light v-space">This the home page.</h1>
 
 
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,40 @@
-
 .navbar-default {
   background: #191919 !important;
-  color: white; }
+  color: white;
+  margin-bottom:0;
+  border-color:transparent;
+}
+
+#hero {
+  background: url('/images/10.jpg');
+
+
+}
+
+#vcform { padding: 60px 0; }
+
+.film {
+  color: white;
+  background: rgba(230,63,137,0.3);
+}
+
+/*------ Helper Classes------*/
+
+.dark {
+  color:#191919;
+}
+.light {
+  color:white;
+}
+.v-space {
+  padding:20px 0;
+}
+.full {
+  background: url('/images/10.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /*# sourceMappingURL=style.css.map */
