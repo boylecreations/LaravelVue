@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section id="hero">
+<section id="hero"g>
     <div class="film">
     <div class="container">
         <div class="row" id="vcform">
@@ -23,7 +23,7 @@
                         <input type="text" v-on:keydown.enter="message = $event.target.value" />
                         <!--<p>@{{ message }}</p>-->
                         <hr  />
-                        <label>@{{ output }}</label>
+                        <label>@{{ counter }}</label>
                         <button type="button" class="btn btn-primary" @click="calculate()">Submit</button>
 
 

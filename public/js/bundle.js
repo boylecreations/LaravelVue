@@ -9065,13 +9065,10 @@ var vcontact = new Vue({
     }
   },
   computed: {
-    output: function() {
+    counter: function() {
       console.log('Compute Output');
+      return this.counter >= 37 ? 'Greater then 37 ' : 'Less then 37';
       //return this.name + " at " + this.email + " talking about " + this.subject + " saying " + this.message;
-    },
-    count: function() {
-      console.log('Compute Count');
-
     }
   },
   watch: {
@@ -9079,15 +9076,16 @@ var vcontact = new Vue({
       //view instanced needs to be stored in watch
       var vm = this;
       setTimeout(function() {
-        //vm.output
+
         console.log('watch called');
       }, 2000)
     },
     counter: function(value) {
       var vm = this;
       setTimeout(function() {
-        //
-      }, 5000)
+        vm.counter = 0;
+        return vm.counter >= 37 ? 'Greater then 37 ' : 'Less then 37';
+      }, 2000)
     }
   },
   methods: {
