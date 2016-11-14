@@ -33,6 +33,14 @@ Route::get('/blog', function() {
     return view('pages.blog');
 });
 
+Route::get('/vcss', function() {
+    return view('pages.vue-css');
+});
+
+Route::get('/resume', function() {
+    return view('pages.resume');
+});
+
 Route::resource('projects', 'ProjectController');
 
 // route to show the login form

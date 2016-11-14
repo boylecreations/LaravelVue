@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body class="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -52,6 +52,7 @@
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                     <li><a href="{{ url('/projects') }}">Projects</a></li>
+                    <li><a href="{{ url('/vcss') }}">App</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

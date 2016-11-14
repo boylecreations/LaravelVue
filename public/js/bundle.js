@@ -9078,7 +9078,7 @@ var vcontact = new Vue({
       return this.name + " at " + this.email + " talking about " + this.subject + " saying " + this.message;
     },
     style: function() {
-      return
+      return enlarge
     }
   },
   watch: {

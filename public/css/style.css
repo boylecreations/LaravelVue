@@ -5,10 +5,19 @@
   border-color:transparent;
 }
 
+*, html, body, form, input, select, textarea, option, div, .form-control {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+* {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
 #hero {
   background: url('/images/10.jpg');
-
-
 }
 
 #vcform { padding: 60px 0; }
