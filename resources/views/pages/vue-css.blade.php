@@ -12,11 +12,11 @@
                     <div class="jumbotron">
                         <h1>@{{ appName }}</h5>
 
-                        <template v-for="transition in transitions">
+                        <div v-for="transition in transitions" :key="transition">
                             <p>
                                 @{{ transition }}
                             </p>
-                        </template>
+                        </div>
 
                         <form>
                             <div class="form-group" >
@@ -47,7 +47,7 @@
                                     </select>
                             </div>
                             <button @click="addTransition()">Add another Transition</button>
-                            <button @click="transitions.push('New Transition')">Add New</button>
+                            <button @click="transitions.push('a new transition')">Add New</button>
                         </form>
                         <p v-if="!show">
                             Your transition type is @{{  }}

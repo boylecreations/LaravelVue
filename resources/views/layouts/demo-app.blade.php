@@ -126,7 +126,7 @@
            methods: {
                addTransition: function() {
                    //var vm = this;
-                  this.transitions.push(this.newTransition)
+                  this.transitions.push('stuff');
                   //this.newTransition = ''
                }
            }
