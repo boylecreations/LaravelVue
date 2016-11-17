@@ -30,35 +30,51 @@
                           </div>-->
                             <div class="form-group" >
                                 <label for="exampleSelect1" >Choose Up to 3 Transitions</label>
-                                    <select  class="form-control" >
+                                    <select  v-model="totalTransitions" class="form-control" >
                                         <!-- in (element, indexValue) :key for binding to track position-->
-                                        <option v-for="(transition, i) in transitions" :key="transition" >@{{ transition.propertyType }} (@{{ i }})</option>
+                                        <option  v-for="transition in customTransitions" :key="transition" ><!--@{{ transition.propertyType }} (@{{ i }})</option>-->
+                                        <!--@{{ transition.transition }}-->
+                                        <template v-for="(value, key, index) in transition">
+                                            <span ><!--@{{ key }}, -->@{{ value }} <!--in index (@{{ index }})--></span>
+                                        </template>
+                                    </option>
                                     </select>
                             </div>
                             <div class="form-group" >
                                     <select  class="form-control" >
                                         <!-- use value to iterate out values of nested for loops -->
-                                        <option v-for="transition in transitions">
-                                            @{{ transition.propertyType }}
+                                        <option v-for="transition in prebuiltTransitions">
+                                            <!--@{{ transition.transition }}-->
                                             <template v-for="(value, key, index) in transition">
-                                                <span>@{{ key }}, @{{ value }} in index (@{{ index }})</span>
+                                                <span><!--@{{ key }}, -->@{{ value }} <!--in index (@{{ index }})--></span>
                                             </template>
                                         </option>
                                     </select>
                             </div>
                             <div class="form-group" >
                                     <select  class="form-control" >
-                                        <!-- template makes children only come out of nested views -->
-                                        <template v-for="transition in transitions">
-                                            <option>@{{ transition.propertyType }}</option>
-                                        </template>
+                                        <!-- use value to iterate out values of nested for loops -->
+                                        <option v-for="transition in prebuiltTransitions">
+                                            <!--@{{ transition.transition }}-->
+                                            <template v-for="(value, key, index) in transition">
+                                                <span><!--@{{ key }}, -->@{{ value }} <!--in index (@{{ index }})--></span>
+                                            </template>
+                                        </option>
                                     </select>
                             </div>
-                            <button @click="addTransition">Add another Transition</button>
-                            <button @click="transitions.push('a new transition')">Add New</button>
+                            <!--<div class="form-group" >
+                                    <select  class="form-control" >-->
+                                        <!-- template makes children only come out of nested views -->
+                                        <!--<template v-for="transition in transitions">
+                                            <option>@{{ transition.transition }}</option>
+                                        </template>
+                                    </select>
+                            </div>-->
+                            <button class="btn btn-primary" @click="addTransition">Add New Transition</button>
+                            <button class="btn btn-primary" @click="startTransition">Start Transition</button>
                         </form>
                         <p v-if="!show">
-                            Your transition type is @{{  }}
+                            Your transition type is @{{ totalTransitions }}
                         </p>
                         <p v-else>
                             You have not chosen a Transition.
@@ -67,13 +83,13 @@
                             Good Job Selecting!
                         </p>
                         <button @click="show = !show">Swap</button>
-                        <button @click="startTransition" class="btn btn-primary">Start Transition</button>
+
                     </div>
                 </div>
                 <div class="col-sm-6">
                         <div class="jumbotron">
 
-                            <div class="circle animated" :class="" >
+                            <div class="circle animated" :class="{}" >
 
                             </div>
 

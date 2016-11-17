@@ -99,13 +99,90 @@
             data: {
                 appName: 'CSS3 Animater',
                 show: true,
+                totalTransitions: [],
                 // transition: '',
-                transitions: [
+                customTransitions: [
                     // Nested key value pairs and index values (0, 1) for nested for loops
                     { transition: 'width'   },
                     { transition: 'height'  },
                     { transition: 'background-color'   },
                     { transition: 'opacity' }
+                ],
+                prebuiltTransitions: [
+                    { transition: 'flash'                },
+                    { transition: 'pulse'                },
+                    { transition: 'rubberBand'           },
+                    { transition: 'shake'                },
+                    { transition: 'headShake'            },
+                    { transition: 'swing'                },
+                    { transition: 'tada'                 },
+                    { transition: 'wobble'               },
+                    { transition: 'jello'                },
+                    { transition: 'bounceIn'             },
+                    { transition: 'bounceInDown'         },
+                    { transition: 'bounceInLeft'         },
+                    { transition: 'bounceInRight'        },
+                    { transition: 'bounceInUp'           },
+                    { transition: 'bounceOut'            },
+                    { transition: 'bounceOutDown'        },
+                    { transition: 'bounceOutLeft'        },
+                    { transition: 'bounceOutRight'       },
+                    { transition: 'bounceOutUp'          },
+                    { transition: 'fadeIn'               },
+                    { transition: 'fadeInDown'           },
+                    { transition: 'fadeInDownBig'        },
+                    { transition: 'fadeInLeft'           },
+                    { transition: 'fadeInLeftBig'        },
+                    { transition: 'fadeInRight'          },
+                    { transition: 'fadeInRightBig'       },
+                    { transition: 'fadeInUp'             },
+                    { transition: 'fadeInUpBig'          },
+                    { transition: 'fadeOut'              },
+                    { transition: 'fadeOutDown'          },
+                    { transition: 'fadeOutDownBig'       },
+                    { transition: 'fadeOutLeft'          },
+                    { transition: 'fadeOutLeftBig'       },
+                    { transition: 'fadeOutRight'         },
+                    { transition: 'fadeOutRightBig'      },
+                    { transition: 'fadeOutUp'            },
+                    { transition: 'fadeOutUpBig'         },
+                    { transition: 'flipInX'              },
+                    { transition: 'flipInY'              },
+                    { transition: 'flipOutX'             },
+                    { transition: 'flipOutY'             },
+                    { transition: 'lightSpeedIn'         },
+                    { transition: 'lightSpeedOut'        },
+                    { transition: 'rotateIn'             },
+                    { transition: 'rotateInDownLeft'     },
+                    { transition: 'rotateInDownRight'    },
+                    { transition: 'rotateInUpLeft'       },
+                    { transition: 'rotateInUpRight'      },
+                    { transition: 'rotateOut'            },
+                    { transition: 'rotateOutDownLeft'    },
+                    { transition: 'rotateOutDownRight'   },
+                    { transition: 'rotateOutUpLeft'      },
+                    { transition: 'rotateOutUpRight'     },
+                    { transition: 'hinge'                },
+                    { transition: 'rollIn'               },
+                    { transition: 'rollOut'              },
+                    { transition: 'zoomIn'               },
+                    { transition: 'zoomInDown'           },
+                    { transition: 'zoomInLeft'           },
+                    { transition: 'zoomInRight'          },
+                    { transition: 'zoomInUp'             },
+                    { transition: 'zoomOut'              },
+                    { transition: 'zoomOutDown'          },
+                    { transition: 'zoomOutLeft'          },
+                    { transition: 'zoomOutRight'         },
+                    { transition: 'zoomOutUp'            },
+                    { transition: 'slideInDown'          },
+                    { transition: 'slideInLeft'          },
+                    { transition: 'slideInRight'         },
+                    { transition: 'slideInUp'            },
+                    { transition: 'slideOutDown'         },
+                    { transition: 'slideOutLeft'         },
+                    { transition: 'slideOutRight'        },
+                    { transition: 'slideOutUp'           }
                 ],
                 measurements: [
                     { measurement: 'px'  },
@@ -114,15 +191,18 @@
                 ]
             },
             computed: {
-               //animation: function() {
-                //   return firstTransition + ' ' + secondTransition;
-               //}
-           },
+               animation: function() {
+                   return firstTransition + ' ' + secondTransition;
+               }
+           },//end computed
            methods: {
               addTransition: function() {
-                   //var vm = this;
-                  this.transitions.push('stuff');
+                  //var vm = this;
+                  this.customTransitions.unshift({ transtion: 'transition'});
                   //this.newTransition = ''
+              },
+              addTransitionForm: function() {
+                  formInputs.push();
               },
               startTransition: function() {
 
@@ -130,8 +210,8 @@
               onSubmit: function() {
                   return null;
               }
-           }
-        })
+          }// end methods
+      })// end instance
     </script>
 
 </body>
