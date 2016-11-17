@@ -1,8 +1,35 @@
 .navbar-default {
-  background: #191919 !important;
+  background: transparent !important;
   color: white;
   margin-bottom:0;
   border-color:transparent;
+}
+
+.circle {
+      width: 250px;
+      height: 250px;
+      -webkit-border-radius: 250px !important;
+      -moz-border-radius: 250px !important;
+      border-radius: 250px !important;
+      background: red;
+      border:25px solid red;
+      margin:100px;
+    }
+
+.app-layout .cover {
+  background: url('/images/10.jpg');
+}
+
+.app-layout .film {
+    background: url('/images/EPHEMERA.png');
+}
+
+.geometric-mask {
+  background: url('/images/GEOMETRICS_03.png');
+}
+
+.ephemera-film {
+  background: url('/images/EPHEMERA.png');
 }
 
 *, html, body, form, input, select, textarea, option, div, .form-control {
@@ -17,7 +44,7 @@
   -moz-border-radius: 0 !important;
 }
 #hero {
-  background: url('/images/10.jpg');
+a
 }
 
 #vcform { padding: 60px 0; }

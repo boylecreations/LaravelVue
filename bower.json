@@ -2,6 +2,7 @@
   "name": "laravel-dev",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "axios": "^0.15.2"
+    "axios": "^0.15.2",
+    "animate.css": "^3.5.2"
   }
 }

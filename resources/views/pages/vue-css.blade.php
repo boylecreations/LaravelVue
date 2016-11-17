@@ -12,23 +12,31 @@
                     <div class="jumbotron">
                         <h1>@{{ appName }}</h5>
 
-                        <div v-for="transition in transitions" :key="transition">
+                        <!--<div v-for="transition in transitions" :key="transition">
                             <p>
                                 @{{ transition }}
                             </p>
-                        </div>
+                        </div>-->
 
-                        <form>
+                        <form v-on:submit.prevent="onSubmit">
+                            <!--<div class="form-group">
+
+                              <button class="btn btn-success" @click="newTransition">Add new Transition</button>
+                              <select class="form-control">
+                                <option v-for="transition in transitions" :key="transition">
+
+                                </option>
+                              </select>
+                          </div>-->
                             <div class="form-group" >
-
                                 <label for="exampleSelect1" >Choose Up to 3 Transitions</label>
-                                    <select v-model="firstTransition" class="form-control" >
+                                    <select  class="form-control" >
                                         <!-- in (element, indexValue) :key for binding to track position-->
                                         <option v-for="(transition, i) in transitions" :key="transition" >@{{ transition.propertyType }} (@{{ i }})</option>
                                     </select>
                             </div>
                             <div class="form-group" >
-                                    <select v-model="secondTransition" class="form-control" >
+                                    <select  class="form-control" >
                                         <!-- use value to iterate out values of nested for loops -->
                                         <option v-for="transition in transitions">
                                             @{{ transition.propertyType }}
@@ -39,14 +47,14 @@
                                     </select>
                             </div>
                             <div class="form-group" >
-                                    <select v-model="thirdTransition" class="form-control" >
+                                    <select  class="form-control" >
                                         <!-- template makes children only come out of nested views -->
                                         <template v-for="transition in transitions">
                                             <option>@{{ transition.propertyType }}</option>
                                         </template>
                                     </select>
                             </div>
-                            <button @click="addTransition()">Add another Transition</button>
+                            <button @click="addTransition">Add another Transition</button>
                             <button @click="transitions.push('a new transition')">Add New</button>
                         </form>
                         <p v-if="!show">
@@ -59,11 +67,17 @@
                             Good Job Selecting!
                         </p>
                         <button @click="show = !show">Swap</button>
+                        <button @click="startTransition" class="btn btn-primary">Start Transition</button>
                     </div>
                 </div>
                 <div class="col-sm-6">
                         <div class="jumbotron">
-                            @{{ appName }} - Column 2
+
+                            <div class="circle animated" :class="" >
+
+                            </div>
+
+
                         </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
@@ -96,26 +97,20 @@
         var vcs = new Vue({
             el: "#vcss",
             data: {
-                show: true,
-                newTransition: '',
-                firstTransition: '',
-                secondTransition: '',
-                thirdTransition: '',
-                chosenTransition: '',
                 appName: 'CSS3 Animater',
+                show: true,
                 // transition: '',
                 transitions: [
                     // Nested key value pairs and index values (0, 1) for nested for loops
-                    { propertyType: 'Width',
-                      baconType: 'Crispy'
-                    },
-                    { propertyType: 'Height'    },
-                    { propertyType: 'Color'     },
-                    { propertyType: 'Opacity'   }
+                    { transition: 'width'   },
+                    { transition: 'height'  },
+                    { transition: 'background-color'   },
+                    { transition: 'opacity' }
                 ],
-                items: [
-                  { message: 'Foo' },
-                  { message: 'Bar' }
+                measurements: [
+                    { measurement: 'px'  },
+                    { measurement: 'em'  },
+                    { measurement: 'rem' }
                 ]
             },
             computed: {
@@ -124,11 +119,17 @@
                //}
            },
            methods: {
-               addTransition: function() {
+              addTransition: function() {
                    //var vm = this;
                   this.transitions.push('stuff');
                   //this.newTransition = ''
-               }
+              },
+              startTransition: function() {
+
+              },
+              onSubmit: function() {
+                  return null;
+              }
            }
         })
     </script>

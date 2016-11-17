@@ -11,6 +11,9 @@
 |
 */
 
+
+/* STORE API ROUTES -------*/
+
 Route::get('api/projects', function() {
     return App\Project::all();
 });
@@ -19,7 +22,7 @@ Route::post('api/projects', function() {
     App\Project::create(Request::all());
 });
 
-
+/* URL ROUTES --------------*/
 
 Route::get('/', function () {
     return view('welcome');

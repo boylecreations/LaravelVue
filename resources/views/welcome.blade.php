@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row">
             <div class="full">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-12">
 
-                    <h1 class="light v-space">This the home page.</h1>
+                    <h1 class="light v-space">This the home page dude.</h1>
 
 
                 </div>
