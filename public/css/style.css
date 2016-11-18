@@ -12,7 +12,7 @@
       -moz-border-radius: 250px !important;
       border-radius: 250px !important;
       background: red;
-      border:25px solid red;
+      border:8px solid black;
       margin:100px;
     }
 
@@ -55,11 +55,36 @@ a
 
 /*------ Helper Classes------*/
 
+.hspace {
+  margin-right:15px;
+  margin-left:15px;
+}
+
+.hspace-right {
+  margin-right: 15px;
+}
+
+.hspace-left {
+  margin-left: 15px;
+}
+
+.v-space {
+  margin :15px 0;
+}
+
+.vspace-top {
+  margin-top:15px;
+}
+
+.vspace-bottom {
+  margin-bottom:15px;
+}
+
 .demoBlock {
  max-width:300px;
  height:200px;
  background: white;
- border-bottom:1px solid #ccc;
+ border-bottom:8px solid #191919;
  margin-bottom:60px;
 }
 .red {
@@ -81,9 +106,7 @@ a
 .light {
   color:white;
 }
-.v-space {
-  padding:20px 0;
-}
+
 .full {
   background: url('/images/10.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;

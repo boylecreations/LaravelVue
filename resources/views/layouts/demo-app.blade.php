@@ -99,7 +99,15 @@
             data: {
                 appName: 'CSS3 Animater',
                 show: true,
-                totalTransitions: [],
+                customTransition1: '',
+                customMeasurement1: '',
+                customValue1: '',
+                selected: '',
+                totalTransitions: [
+                    { customTransition: '' },
+                    { customMeasurement: ''},
+                    { customValue: ''      }
+                ],
                 // transition: '',
                 customTransitions: [
                     // Nested key value pairs and index values (0, 1) for nested for loops
@@ -198,7 +206,14 @@
            methods: {
               addTransition: function() {
                   //var vm = this;
-                  this.customTransitions.unshift({ transtion: 'transition'});
+                  var vm = this.selected;
+                  //this.customTransitions.unshift({ transtion: 'transition'});
+                  if( this.selected != '') {
+                      this.customTransitions.unshift({ transition: vm });
+                  } else {
+                      alert('fix yo code');
+                  }
+
                   //this.newTransition = ''
               },
               addTransitionForm: function() {
