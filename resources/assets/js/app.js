@@ -10,6 +10,11 @@ Vue.filter('strip-html', function(value) {
 
 });
 
+Vue.component('hello', {
+    template: '<h1>Hello I am a component named hello</h1>'
+
+});
+
 //Vue.filter('escape-string')
 
 
@@ -111,7 +116,7 @@ var vposts = new Vue({
 
 
 var proj = new Vue({
-      el: '#v-projects',
+      // called with $mount instead
 
       data: function() {
         return {
@@ -155,3 +160,18 @@ var proj = new Vue({
           }
       }
   });
+
+  proj.$mount('#v-projects');
+
+
+  // store vue instance on vm.
+  var vm = new Vue({
+      template: '<h1>This is the VM template</h1>'
+  });
+
+  // mount vm on el vm-template.
+  vm.$mount('#vm-template');
+
+  //or
+
+  //document.getElementByID('vm-template').appendChild(vm.$el);

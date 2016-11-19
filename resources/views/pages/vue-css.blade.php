@@ -28,7 +28,7 @@
                                 </option>
                               </select>
                           </div>-->
-                          <label for="exampleSelect1" >Select Animation Type</label>
+                          <label for="exampleSelect1" >Select Animation Type, Measurement, Direction and Offset</label>
                             <div class="form-inline row" >
 
                                     <select v-model="customTransition1" class="form-control col-sm-4 hspace" >
@@ -115,6 +115,20 @@
 
                         </div>
                 </div>
+
+                <div class="col-lg-12">
+                    <template id="vm-template"></template>
+
+                </div>
+
+                <div class="col-lg-12">
+                    <div>
+                        <hello></hello>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>
