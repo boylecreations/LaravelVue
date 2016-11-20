@@ -45,12 +45,12 @@
 
 
 
-            <!--@foreach($projects as $project)
+            @foreach($projects as $project)
             <div class="col-sm-3">
                 {{ $project->project }}
                 <img src="{{ $project->client_thumb }}" class="img-responsive" />
             </div>
-            @endforeach-->
+            @endforeach
 
 
         </div>
