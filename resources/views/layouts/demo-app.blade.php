@@ -203,6 +203,31 @@
                    return firstTransition + ' ' + secondTransition;
                }
            },//end computed
+           // lifecycle hooks
+           beforeCreate: function() {
+             console.log('created()');
+           },
+           created: function() {
+               console.log('app created');
+           },
+           beforeMount: function() {
+
+           },
+           mounted: function() {
+
+           },
+           beforeUpdate: function() {
+
+           },
+           updated: function() {
+               console.log('item updated');
+           },
+           beforeDestroy: function() {
+
+           },
+           destroyed: function() {
+               console.log('destroyed()');
+           },
            methods: {
               addTransition: function() {
                   //var vm = this;
@@ -224,6 +249,12 @@
               },
               onSubmit: function() {
                   return null;
+              },
+              destroy: function() {
+                  this.$destroy();
+              },
+              restart: function() {
+                  this.$mount('#vcss');
               }
           }// end methods
       })// end instance

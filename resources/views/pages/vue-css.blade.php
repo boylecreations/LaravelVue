@@ -89,11 +89,14 @@
                             </div>-->
                             <button ref="button1" class="btn btn-primary" @click="addTransition">Add New Transition</button>
                             <button ref="button2" class="btn btn-primary" @click="startTransition">Start Transition</button>
-                            @{{ this.$refs }}
+                            <button ref="button3" class="btn btn-primary" @click="destroy">Destroy Instance</button>
+                            <button ref="button4" class="btn btn-primary" @click="restart">Restart Instance</button>
+
+                            <!--@{{ this.$refs }}-->
 
                         </form>
                         <p v-if="!show">
-                            Your transition type is @{{ totalTransitions }}
+                            Your transition type is @{{ selected }}
                         </p>
                         <p v-else>
                             You have not chosen a Transition.
@@ -107,28 +110,20 @@
                 </div>
                 <div class="col-lg-6">
                         <div class="jumbotron ">
-
-                            <div class="center-block circle animated" v-bind:class="selected" >
-
-                            </div>
-
-
+                            <div class="center-block circle animated" v-bind:class="selected" ></div>
                         </div>
                 </div>
 
                 <div class="col-lg-12">
                     <template id="vm-template"></template>
-
                 </div>
 
                 <div class="col-lg-12">
                     <div>
                         <hello></hello>
+                        <hello></hello>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
